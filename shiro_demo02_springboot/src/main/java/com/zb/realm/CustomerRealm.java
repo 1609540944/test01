@@ -47,6 +47,7 @@ public class CustomerRealm extends AuthorizingRealm {
                  *      密码/盐值
                  *      返回 认证信息
                  */
+                System.out.println("CustomerRealm.AuthenticationInfo");
                 String user = (String) authenticationToken.getPrincipal();
                 List<String> names = Arrays.asList("jack", "rose", "scott");
                 if (!names.contains(user)){
