@@ -61,7 +61,6 @@ public class CustomerRealm extends AuthorizingRealm {
 
                 //返回一个认证信息
                 SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(user,pwd,salt,this.getName());
-
                 return simpleAuthenticationInfo;
         }
 }
