@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--  登录页面的操作认证:
+       01 直接 使用shiro中的过滤器进行登录操作
+
+          01  url 必须和 跳转到登录页面的url必须一致
+          02  表单提交必须是post
+          03  提交的数据的要求必须是
+              username / password
+
+      01 shiro的规范
+
+      02 看源码
+
+-->
+<span style="color: red" th:text="${msg}"></span>
+<body>
+<form th:action="@{/user/loginPage}" method="post">
+    用户名:<input type="text" name="username"> <br>
+    密码:<input type="text" name="password"> <br>
+    记住我：<input type="checkbox" name="rememberMe">
+    <input type="submit" th:value="登录">
+</form>
+</body>
+</html>
